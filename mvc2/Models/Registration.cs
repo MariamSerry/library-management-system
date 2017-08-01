@@ -15,6 +15,7 @@ namespace mvc2.Models
         public string UserName { get; set; }
         [Required(ErrorMessage ="you have to enter the password")]
         public string Password { get; set; }
+        public string Address { get; set; }
         [EmailAddress]
         public string Email { get; set; }
     }

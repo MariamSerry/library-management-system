@@ -108,10 +108,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\LOGIN\Details.cshtml" />
-    <Content Include="Views\LOGIN\Create.cshtml" />
-    <Content Include="Views\LOGIN\Edit.cshtml" />
-    <Content Include="Views\LOGIN\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -121,9 +117,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBContext.cs" />
-    <Compile Include="Models\login.cs" />
-    <Compile Include="Models\Registration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +140,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mvc2.core\mvc2.core.csproj">
+      <Project>{D71AC5D0-86B3-49A7-BDF0-A8C71ADE36B7}</Project>
+      <Name>mvc2.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mvc2.Model1\mvc2.Model1.csproj">
+      <Project>{c2056330-7ac8-41af-9388-d62397ec2299}</Project>
+      <Name>mvc2.Model1</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,5 @@
-﻿using mvc2.Models;
+﻿using mvc2.core;
+using mvc2.Model1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,9 @@ namespace mvc2.Controllers
         [HttpPost]
         public ActionResult Index(Registration newRegisrtation)
         {
-
-            DBContext db = new DBContext();
-            db.registration.Add(newRegisrtation);
-            db.SaveChanges();
+           Userserver _userService = new Userserver();
+            _userService.Add(newRegisrtation);
+           
              
             return View();
         }

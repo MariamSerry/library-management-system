@@ -1,5 +1,5 @@
 ﻿
-@model mvc2.Models.Registration
+@model mvc2.Model1.Registration
 
 @{
     Layout = null;
@@ -19,13 +19,25 @@
     </h1>
     <div>
         @using (Html.BeginForm())
-        {
+        {<div>
+        <h3>UserName</h3>
             @Html.TextBoxFor(a => Model.UserName)
+        </div>
+        <div>
+            <h3>Password</h3>
             @Html.TextBoxFor(a => Model.Password)
-            @Html.TextBoxFor(a=> Model.Email)
-
+        </div>
+        <div>
+            <h3>Address</h3>
+            @Html.TextBoxFor(a => Model.Address)
+        </div>
+        <div>
+            <h3>Email</h3>
+            @Html.TextBoxFor(a => Model.Email)
+        </div>
             <input type="submit" value="Register" />
         }
-       
+        <input type="submit" value="Go to home page" onclick='location.href = "@Url.Action("Index", "LOGIN")";' />
+
 </body>
 </html>
