@@ -1,0 +1,31 @@
+﻿
+@model mvc2.Models.Registration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+</head>
+<body>
+    <h1>
+        Goin our web page :D
+    </h1>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBoxFor(a => Model.UserName)
+            @Html.TextBoxFor(a => Model.Password)
+            @Html.TextBoxFor(a=> Model.Email)
+
+            <input type="submit" value="Register" />
+        }
+       
+</body>
+</html>
